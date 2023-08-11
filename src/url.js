@@ -1,1 +1,1 @@
-be_Url='https://bookmark-backend-olc5.onrender.com'
+export const be_Url='https://bookmark-backend-olc5.onrender.com'
