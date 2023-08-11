@@ -1,23 +1,21 @@
 import { Link , useLoaderData, Form} from "react-router-dom"
 
 function Index(props){
-    const cheeses = useLoaderData()
+    const data = useLoaderData()
 
     return (
         <div>
-            <h2>Create a new Cheese </h2>
+            <h2>Add a Bookmark </h2>
             <Form action="/create" method="post">
-                <input type="text" name="name" placeholder="cheese name"/>
-                <input type="text" name="countryOfOrigin" placeholder="Origin"/>
-                <input type="text" name="image" placeholder="cheese image"/>
-                <input type="submit" value="create Cheese"/>
+                <input type="text" name="name" placeholder="name"/>
+                <input type="text" name="url" placeholder="url"/>
+                <input type="submit" value="c=Create bookmark"/>
             </Form>
 
-            {cheeses.map((cheese, index) => <div key={index} className="cheese">
-            <Link to={`/${cheese._id}`}>
-                <h1>{cheese.name}</h1>
+            {data.map((item, index) => <div key={index} className="bookmark">
+            <Link to={`/${item._id}`}>
+                <h1>{item.name}</h1>
             </Link> 
-            <img src={cheese.image} alt={cheese.name}/>
             
         </div>)}
         </div>
