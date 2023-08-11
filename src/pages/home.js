@@ -1,20 +1,16 @@
 import { useLoaderData, Form } from 'react-router-dom'
+import Bookmark from '../components/Bookmark';
 
 
 const Home = (props) => {
 
-        const person = useLoaderData()
+        const data = useLoaderData()
+        console.log("yoooo here")
+        console.log(data)
+        console.log("yoooo here")
    
-    return <div className='person'>
-        <h1>Bookmark Name</h1>
-        <h2>BookMark Title</h2>
+    return data.map((item, index) => <div>{console.log(item)} </div> )
     
-      
-
-<h2>Update </h2>
-
-
-</div>
 }
 
 
