@@ -9,7 +9,7 @@ function Index(props){
             <Form action="/create" method="post">
                 <input type="text" name="name" placeholder="name"/>
                 <input type="text" name="url" placeholder="url"/>
-                <input type="submit" value="c=Create bookmark"/>
+                <input type="submit" value="Create bookmark"/>
             </Form>
 
             {data.map((item, index) => <div key={index} className="bookmark">

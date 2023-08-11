@@ -12,3 +12,12 @@ export const bookMarksLoader = async () => {
 }
 
 
+export const bookMarkLoader = async ({params}) => {
+    const response = await fetch(`${be_Url}/book/${params.id}`)
+    const bookMark = await response.json()
+    /// Testing 
+    console.log(bookMark)
+    console.log("hereeee")
+    /////
+    return bookMark
+}
