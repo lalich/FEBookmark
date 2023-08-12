@@ -17,7 +17,7 @@ export const bookMarkLoader = async ({params}) => {
     const bookMark = await response.json()
     /// Testing 
     console.log(bookMark)
-    console.log("hereeee")
+    console.log("yoo bro look hereeee")
     /////
     return bookMark
 }
