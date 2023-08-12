@@ -17,6 +17,7 @@ function Show(props){
             <Form action={`/delete/${bookMark._id}`} method="post">
                 <input type="submit" value="Delete bookmark"/>
             </Form>
+            <a href="https://vercel.com/dashboard"> to my link</a>
             
         </div>
 }

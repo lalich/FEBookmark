@@ -2,7 +2,7 @@ import { Link , useLoaderData, Form} from "react-router-dom"
 
 function Index(props){
     const data = useLoaderData()
-
+    const path = "https://vercel.com/dashboard"
     return (
         <div>
             <h2>Add a Bookmark </h2>
@@ -11,10 +11,11 @@ function Index(props){
                 <input type="text" name="url" placeholder="url"/>
                 <input type="submit" value="Create bookmark"/>
             </Form>
-
             {data.map((item, index) => <div key={index} className="bookmark">
+
+            <h1><a href={'https://vercel.com/dashboard'}>{item.name}</a></h1>
             <Link to={`/${item._id}`}>
-                <h1>{item.name}</h1>
+                <h3>edit {item.name}</h3>
             </Link> 
             
         </div>)}
