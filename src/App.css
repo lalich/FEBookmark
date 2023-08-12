@@ -37,9 +37,19 @@
   }
 }
 
+
+body{
+  background-color: red ;
+  transition: 5ms;
+  background-image:url(./pages/cool-background.png) ;
+  font-family: 'Bebas Neue', sans-serif;
+font-family: 'Roboto Condensed', sans-serif;
+font-family: 'Tilt Prism', cursive;
+}
 .crtfrm {
   width: 400px;
   background-color: wheat;
+  transition: 0.3ms;
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
@@ -64,8 +74,13 @@
 }
 
 #crtfrm:hover {
-  background-color: #8ff192;
+  background-color: cyan;
   color: white;
+    transition: width 2s, height 2s, transform 2s;
+    width: 300px;
+    height: 300px;
+    transform: rotate(360deg);
+  
 }
 .form {
   display: flex;
@@ -109,8 +124,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-}
-body{
-  /* background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%); */
-  background-image: url(./pages/background.png);
+  gap : 10px;
+  margin-top: 62px;
+  margin-right: 12px;
 }
