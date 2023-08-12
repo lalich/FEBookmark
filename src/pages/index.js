@@ -13,16 +13,18 @@ function Index(props){
                 <input type="submit" value="Create bookmark"/>
             </Form>
             </div>
-            {data.map((item, index) => <div id="crtfrm" key={index} className="bookmark">
+            <div id="main">
+                {data.map((item, index) => <div id="crtfrm" key={index} className="bookmark">
 
-            <h1><a href={`https://${item.url}.com`}>{item.name}</a></h1>
-            <Link to={`/${item._id}`}>
-                <button className="edit">Edit {item.name}</button> 
-            </Link> 
-                <Form action={`/delete/${item._id}`} method="post">
-                <input className="delete" type="submit" value="X"/>
-            </Form>  
-        </div>)}
+                <h1><a href={`https://${item.url}.com`}>{item.name}</a></h1>
+                <Link to={`/${item._id}`}>
+                    <button className="edit">Edit {item.name}</button> 
+                </Link> 
+                    <Form action={`/delete/${item._id}`} method="post">
+                    <input className="delete" type="submit" value="X"/>
+                </Form>  
+                </div>)}
+            </div>
         </div>
     )
 }
