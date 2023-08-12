@@ -10,7 +10,7 @@ function Show(props){
             <h2>Update {bookMark.name}</h2>
             <Form action={`/update/${bookMark._id}`} method="put">
                 <input type="text" name="name" placeholder="bookmark name"/>
-                <input type="text" name="url" placeholder="url"/>
+                <input type="text" name="url" placeholder="add ONLY the website name"/>
                 <input type="submit" value="Update Bookmark"/>
             </Form>
             <h2>Delete {bookMark.name}</h2>
