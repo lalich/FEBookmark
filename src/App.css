@@ -36,10 +36,14 @@
     transform: rotate(360deg);
   }
 }
-
+body{
+  background-color: red ;
+  transition: 5ms;
+}
 .crtfrm {
   width: 400px;
   background-color: wheat;
+  transition: 0.3ms;
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
@@ -66,6 +70,11 @@
 #crtfrm:hover {
   background-color: #8ff192;
   color: white;
+    transition: width 2s, height 2s, transform 2s;
+    width: 300px;
+    height: 300px;
+    transform: rotate(360deg);
+  
 }
 .form {
   display: flex;
@@ -103,4 +112,10 @@
 
 .bookmark {
   background-color: red ;
+}
+
+#main{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
