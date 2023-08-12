@@ -8,8 +8,8 @@ function Index(props){
             <div className="crtfrm">
             <h2 className="bm">Add a Bookmark</h2>
             <Form className="form" action="/create" method="post">
-                <input type="text" name="name" placeholder="name"/>
-                <input type="text" name="url"  placeholder="ONLY the website name"required/>
+                <input type="text" name="name" placeholder="Bookmark Name" required/>
+                <input type="text" name="url"  placeholder="Website Name"required/>
                 <input type="submit" value="Create bookmark"/>
             </Form>
             </div>
