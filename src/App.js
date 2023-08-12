@@ -7,7 +7,7 @@ import "./index.css";
 const App = () => {
   return (
     <div className="title">
-        <h1> Bookmark App</h1>
+        <h1 className="bm"> Bookmark App</h1>
         <Outlet/>
 
         
