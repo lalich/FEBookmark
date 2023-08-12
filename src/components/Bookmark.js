@@ -3,7 +3,7 @@ import { Link } from "react-router-dom"
 function Bookmark(props){
     return <nav className="nav">
         <Link to="/">
-            <div>book App</div>
+            <div>Book App</div>
         </Link>
     </nav>
 

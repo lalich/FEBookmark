@@ -1,23 +1,27 @@
 import { Link , useLoaderData, Form} from "react-router-dom"
-
+import { deleteAction } from "../actions"
+import "../App.css"
 function Index(props){
     const data = useLoaderData()
-    const path = "https://vercel.com/dashboard"
     return (
-        <div>
-            <h2>Add a Bookmark </h2>
-            <Form action="/create" method="post">
+        <div className="Home">
+            <div className="crtfrm">
+            <h2>Add a Bookmark</h2>
+            <Form className="form" action="/create" method="post">
                 <input type="text" name="name" placeholder="name"/>
-                <input type="text" name="url" placeholder="url"/>
+                <input type="text" name="url"  placeholder="ONLY the website name"required/>
                 <input type="submit" value="Create bookmark"/>
             </Form>
-            {data.map((item, index) => <div key={index} className="bookmark">
+            </div>
+            {data.map((item, index) => <div id="crtfrm" key={index} className="bookmark">
 
-            <h1><a href={'https://vercel.com/dashboard'}>{item.name}</a></h1>
+            <h1><a href={`https://${item.url}.com`}>{item.name}</a></h1>
             <Link to={`/${item._id}`}>
-                <h3>edit {item.name}</h3>
+                <button className="edit">Edit {item.name}</button> 
             </Link> 
-            
+                <Form action={`/delete/${item._id}`} method="post">
+                <input className="delete" type="submit" value="X"/>
+            </Form>  
         </div>)}
         </div>
     )
