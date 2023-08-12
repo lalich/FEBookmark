@@ -1,5 +1,5 @@
 import { Link , useLoaderData, Form} from "react-router-dom"
-
+import { deleteAction } from "../actions"
 function Index(props){
     const data = useLoaderData()
     const path = "https://vercel.com/dashboard"
@@ -15,8 +15,12 @@ function Index(props){
 
             <h1><a href={`https://${item.url}.com`}>{item.name}</a></h1>
             <Link to={`/${item._id}`}>
-                <h3>edit {item.name}</h3>
+                <button>Edit {item.name}</button> 
             </Link> 
+                <Form action={`/delete/${item._id}`} method="post">
+                <input type="submit" value="X"/>
+            </Form>
+            
             
         </div>)}
         </div>
